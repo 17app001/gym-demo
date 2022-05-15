@@ -12,7 +12,8 @@
 - .gitignore
     - https://github.com/GoesToEleven/html-css/blob/master/.gitignore
 
-
+- 特殊符號
+    - https://www.w3schools.com/html/html_entities.asp
 
 - markdown
     - https://www.mdeditor.tw/
