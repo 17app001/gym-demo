@@ -7,12 +7,43 @@
 <head>
     <meta charset="utf-8">
     <title>健身網站</title>
+
+    <style>
+        /* class => . */
+        .banner {
+            background-color: #666666;
+            color: white;
+            padding: 12px;
+            /* 1rem=>16px */
+            font-size: 24px;
+            font-family: '標楷體', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin-bottom: 6px;
+        }
+
+        .image-style {
+            background-color: black;
+            padding: 6px;
+            border-radius: 6px;
+            height: 200px;
+        }
+
+        .image-list {
+            text-align: center;
+            padding: 24px;
+            background-color: #666666;
+            margin-bottom: 6px;
+        }
+    </style>
+
+
 </head>
 
 <!--可視區-->
 
 <body>
-    <h1 style="color:blue;background-color: #6ebcee;">健身，英文稱為<u>workout</u></h1>
+    <h1
+        style="color:blue;background-color: #6ebcee; padding: 24px; margin: 0px; text-align: center; border:2px solid black">
+        健身，英文稱為<u>workout</u></h1>
     <div style="background-color: antiquewhite;">
         <p>
             健身這兩個字拆開來的意思就是健康身體，通過各種運動方式或方法來增強力量、增加肌肉量、柔韌性、耐力，以及提高協調和控制身體各部分的能力來使我們的身體更強健。
@@ -28,7 +59,7 @@
     <a target="_blank" href="https://fitnesstwenty.com/benefits-of-workout/">
         <img src="https://fitnesstwenty.com/wp-content/uploads/2020/10/71-1024x320.jpg" width="100%" alt="1024x320.jpg">
     </a>
-    <h2>&spades;健身的10個好處</h2>
+    <div class="banner">&spades;健身的10個好處</div>
     <ol type="1">
         <li>增加基礎代謝率</li>
         <li>預防疾病和提高免疫力</li>
@@ -43,11 +74,12 @@
     </ol>
     <hr>
     <!-- 500pixel -->
-    <img height="300px" src="./images/charles-gaudreault-xXofYCc3hqc-unsplash.jpg" alt="">
-    <img height="300px" src="./images/hayley-kim-studios-eot-ka5dM7Q-unsplash.jpg" alt="">
-    <img height="300px" src="./images/sushil-ghimire-5UbIqV58CW8-unsplash.jpg" alt="">
-
-    <h2>&clubs; 好文章連結</h2>
+    <div class="image-list">
+        <img class="image-style" src="./images/charles-gaudreault-xXofYCc3hqc-unsplash.jpg" alt="">
+        <img class="image-style" src="./images/hayley-kim-studios-eot-ka5dM7Q-unsplash.jpg" alt="">
+        <img class="image-style" src="./images/sushil-ghimire-5UbIqV58CW8-unsplash.jpg" alt="">
+    </div>
+    <div class="banner">&clubs; 好文章連結</div>
     <a target="_blank" href="https://www.fe-amart.com.tw/index.php/life-style/life-info/secret-recipe/hero-6">
         <b>健身初學者必看！10個常見的健身迷思</b><br>
     </a>
@@ -80,7 +112,7 @@
         </a>
     </small>
     <hr>
-    <h2>&hearts; 一天所需卡路里</h2>
+    <div class="banner">&hearts; 一天所需卡路里</div>
     <table width="100%" border="0" cellspacing="0" cellpadding="0"
         style="width: 100%; border-collapse: collapse; border: 1px solid #666666;"
         summary="根據每日活動量及為了調整體重至健康體重，可計算每日建議攝取熱量">
@@ -151,7 +183,7 @@
     因他的工作為坐辦公室，屬輕量工作，每天攝取熱量應在1300至1625大卡之間(=20~25大卡*65公斤)
 
     <hr>
-    <h2>健身影片</h2>
+    <div class="banner">健身影片</div>
     <iframe width="100%" height="457px" src="https://www.youtube.com/embed/LmrKejHOaG4"
         title="男女適用!! 20分鐘 站立式全身燃脂運動、不跳躍、不傷膝、簡單有效" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -164,7 +196,7 @@
         影片載入失效
     </video>
     <hr>
-    <h2>表單填寫</h2>
+    <div class="banner">表單填寫</div>
     <p>
         需要更多資訊?免費索取健身資訊<br>
         前100名還贈送［我愛健身］書籍一本!
