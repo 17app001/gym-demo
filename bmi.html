@@ -5,10 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI計算機</title>
+
+    <style>
+        body {
+            text-align: center;
+            background-color: antiquewhite;
+        }
+
+        form {
+            width: 300px;
+            height: 180px;
+            margin: 12px auto;
+            border: 2px yellow solid;
+            border-radius: 12px;
+            background-color: orange;
+            padding: 24px;
+        }
+
+        input {
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        #calc {
+            width: 100px;
+            background-color: aqua;
+        }
+
+        .bmi-result {
+            background-color: brown;
+            color: white;
+        }
+    </style>
+
 </head>
 
 <body>
-    <h1>BMI計算機</h1>
+    <h1>BMI計算機 v1.0</h1>
+    <a href="./index.html">返回</a>
     <form action="" method="GET">
         <label for="username">姓名</label>
         <input type="text" id="username" name="username" value="jerry"><br>
@@ -17,19 +51,19 @@
         <label for="birthday">生日</label>
         <input type="date" id="birthday" name="birthday"><br>
         <label for="height">身高</label>
-        <input type="text" id="height" name="height" value="165" step="0.5" required><br>
+        <input type="text" id="height" name="height" step="0.5" required><br>
         <label for="weight">體重</label>
-        <input type="text" id="weight" name="weight" value="60" step="0.5" required><br>
+        <input type="text" id="weight" name="weight" step="0.5" required><br>
         <label for="email">信箱</label>
         <input type="email" id="email" name="email" placeholder="請輸入email"><br>
         <p>
             <input type="button" id="calc" value="計算"></input>
-            <a href="./index.html">返回</a>
         </p>
-        <h2 class="bmi-result">
-
-        </h2>
     </form>
+    <h1 class="bmi-result">
+    </h1>
+    <h3 class="bmi-comment">
+    </h3>
     <script>
         function calcBMI() {
             // 計算BMI
@@ -43,7 +77,8 @@
                 }
             }
 
-            bmiResultEl.innerHTML = `BMI:${bmi}<br>${comment}`;
+            bmiResultEl.innerText = `BMI:${bmi}`;
+            bmiCommentEl.innerText = comment;
         }
 
         function getBMI(height, weight) {
@@ -71,6 +106,7 @@
         const heightEl = document.querySelector("#height");
         const weightEl = document.querySelector("#weight");
         const bmiResultEl = document.querySelector(".bmi-result");
+        const bmiCommentEl = document.querySelector(".bmi-comment");
 
         console.log(calcBtn, heightEl, weightEl, bmiResultEl);
         // 監聽按鈕
